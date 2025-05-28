@@ -1,0 +1,38 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(WP_AnalogClock_03.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  AboutProc.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AboutProc.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'AboutProc.cpp'을(를) 컴파일하는 중)
+  
+  AnalogClock.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'AnalogClock.cpp'을(를) 컴파일하는 중)
+  
+  MainProc.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\MainProc.cpp(77,29): warning C4244: 'return': 'LRESULT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TimeNeedle.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'TimeNeedle.cpp'을(를) 컴파일하는 중)
+  
+  WP_AnalogClock_03.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'WP_AnalogClock_03.cpp'을(를) 컴파일하는 중)
+  
+  gdiUtil.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'gdiUtil.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\gdiUtil.cpp(6,14): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\gdiUtil.cpp(7,14): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  mathUtil.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'mathUtil.cpp'을(를) 컴파일하는 중)
+  
+  pch.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_AnalogClock_03\AnalogClock.h(34,65): warning C4552: '-': 식의 결과가 사용되지 않습니다.
+  (소스 파일 'pch.cpp'을(를) 컴파일하는 중)
+  
+  WP_AnalogClock_03.vcxproj -> C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\x64\Debug\7.WP_AnalogClock_03.exe

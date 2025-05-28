@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="프로시저">
+      <UniqueIdentifier>{a04014b0-5b7a-4b4a-af3d-6c5bc1d8a140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="미리컴파일된 해더">
+      <UniqueIdentifier>{1ce0d7aa-91f2-4aca-8dad-dc14352593f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="매인윈도우 시스템">
+      <UniqueIdentifier>{fd69223d-d57a-40ef-8fa0-1c140a8d5cad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WP_Mouse_04.h">
+      <Filter>매인윈도우 시스템</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>미리컴파일된 해더</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MainProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseObject.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>미리컴파일된 해더</Filter>
+    </ClCompile>
+    <ClCompile Include="WP_Mouse_04.cpp">
+      <Filter>매인윈도우 시스템</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseObject.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WP_Mouse_04.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="WP_Mouse_04.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

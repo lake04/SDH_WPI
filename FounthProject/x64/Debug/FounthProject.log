@@ -1,0 +1,24 @@
+﻿  pch.cpp
+  AboutProc.cpp
+  FounthProject.cpp
+  MainProc.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(19,29): warning C4244: 'return': 'LRESULT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(28,24): error C2001: 상수에 줄 바꿈 문자가 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(29,5): error C2146: 구문 오류: ')'이(가) 'TextOutW' 식별자 앞에 없습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(28,5): error C2660: 'TextOutW': 함수는 4개의 인수를 사용하지 않습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\wingdi.h(5147,25):
+      'TextOutW' 선언을 참조하십시오.
+      C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(28,5):
+      인수 목록 '(HDC, int, int, const wchar_t [17])'을(를) 일치시키는 동안
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FounthProject\MainProc.cpp(29,5): error C2146: 구문 오류: ';'이(가) 'TextOutW' 식별자 앞에 없습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...

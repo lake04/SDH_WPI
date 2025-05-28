@@ -1,0 +1,38 @@
+﻿  MainProc.cpp
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(22,29): warning C4244: 'return': 'LRESULT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(31,47): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(43,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(51,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(58,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(65,74): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(68,71): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(71,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(74,74): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(77,74): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(80,71): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\WP_Mouse_02\MainProc.cpp(83,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+  WP_Mouse_02.vcxproj -> C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\x64\Debug\WP_Mouse_02.exe

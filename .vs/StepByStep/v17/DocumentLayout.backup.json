@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MainProc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|solutionrelative:WP_Mouse_04\\MainProc.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|solutionrelative:WP_Mouse_04\\MouseObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|solutionrelative:WP_Mouse_04\\MouseObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\WP_Mouse_04.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|solutionrelative:WP_Mouse_04\\WP_Mouse_04.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F2829057-E329-4C56-9D9C-83FC123ED40D}|WP_Mouse_04\\WP_Mouse_04.vcxproj|solutionrelative:WP_Mouse_04\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MouseObject.h",
+              "DocumentMoniker": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.h",
+              "RelativeDocumentMoniker": "WP_Mouse_04\\MouseObject.h",
+              "ToolTip": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.h",
+              "RelativeToolTip": "WP_Mouse_04\\MouseObject.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T02:00:42.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MouseObject.cpp",
+              "DocumentMoniker": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.cpp",
+              "RelativeDocumentMoniker": "WP_Mouse_04\\MouseObject.cpp",
+              "ToolTip": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MouseObject.cpp",
+              "RelativeToolTip": "WP_Mouse_04\\MouseObject.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T02:00:40.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainProc.cpp",
+              "DocumentMoniker": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MainProc.cpp",
+              "RelativeDocumentMoniker": "WP_Mouse_04\\MainProc.cpp",
+              "ToolTip": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\MainProc.cpp",
+              "RelativeToolTip": "WP_Mouse_04\\MainProc.cpp",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T01:57:41.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\pch.h",
+              "RelativeDocumentMoniker": "WP_Mouse_04\\pch.h",
+              "ToolTip": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\pch.h",
+              "RelativeToolTip": "WP_Mouse_04\\pch.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-26T01:57:46.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WP_Mouse_04.cpp",
+              "DocumentMoniker": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\WP_Mouse_04.cpp",
+              "RelativeDocumentMoniker": "WP_Mouse_04\\WP_Mouse_04.cpp",
+              "ToolTip": "C:\\Users\\dlgml\\OneDrive\\Desktop\\DJClass\\StepByStep\\WP_Mouse_04\\WP_Mouse_04.cpp",
+              "RelativeToolTip": "WP_Mouse_04\\WP_Mouse_04.cpp",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAHsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-26T01:52:19.17Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

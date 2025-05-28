@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="프러시저">
+      <UniqueIdentifier>{d3252766-fb0f-4565-939c-5599852f0bb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인윈오두우시스템">
+      <UniqueIdentifier>{d664c074-bc71-46b8-86b0-8de3f8acf5c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="미리컴파일된파일">
+      <UniqueIdentifier>{1355e38e-adae-45c8-9e56-8b7d97fe68e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="프러시저\마우스">
+      <UniqueIdentifier>{8aebdbdd-cd95-4934-9c1c-5cec6aee1ac6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>미리컴파일된파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WP_Mouse_02.h">
+      <Filter>메인윈오두우시스템</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutProc.h">
+      <Filter>프러시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MainProc.h">
+      <Filter>프러시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseInput.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>미리컴파일된파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WP_Mouse_02.cpp">
+      <Filter>메인윈오두우시스템</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutProc.cpp">
+      <Filter>프러시저</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>프러시저</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseInput.cpp">
+      <Filter>프러시저\마우스</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WP_Mouse_02.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="WP_Mouse_02.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
