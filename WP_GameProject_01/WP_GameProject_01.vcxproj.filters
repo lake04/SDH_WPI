@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="프로시저">
+      <UniqueIdentifier>{c3582c89-1193-4323-8d42-6edd496d7c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인윈도우시스템">
+      <UniqueIdentifier>{93f9ea46-1cbe-4ffa-8343-83e9cc6578d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="미리컴파일된 해더">
+      <UniqueIdentifier>{133ba3ee-8fb2-4898-95a8-86e5ded2abff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메시지루프">
+      <UniqueIdentifier>{67c34d55-323a-413c-b2ef-2cf81125705e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="전역변수">
+      <UniqueIdentifier>{b5e8c503-0989-42c3-8b19-eb8fb9c4948e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{74cae4b5-adf9-4ebf-8f5e-d85a566aa923}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>미리컴파일된 해더</Filter>
+    </ClInclude>
+    <ClInclude Include="WP_GameProject_01.h">
+      <Filter>메인윈도우시스템</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MainProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVariable.h">
+      <Filter>전역변수</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgLoop.h">
+      <Filter>메시지루프</Filter>
+    </ClInclude>
+    <ClInclude Include="Dino.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Cactus.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WP_GameProject_01.cpp">
+      <Filter>메인윈도우시스템</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>미리컴파일된 해더</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVariable.cpp">
+      <Filter>전역변수</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgLoop.cpp">
+      <Filter>메시지루프</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Dino.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Cactus.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WP_GameProject_01.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="WP_GameProject_01.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bitmap1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bmp00001.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bmp00002.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="bmp00003.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="cactus.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="robot.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="mic_off_audio.wav">
+      <Filter>리소스 파일</Filter>
+    </Media>
+    <Media Include="mic_on_audio.wav">
+      <Filter>리소스 파일</Filter>
+    </Media>
+    <Media Include="Hit.wav">
+      <Filter>리소스 파일</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wave3.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="wave4.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="wave2.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+</Project>
