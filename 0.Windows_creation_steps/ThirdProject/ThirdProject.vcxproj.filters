@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="프로시저">
+      <UniqueIdentifier>{69471da4-a645-4d9c-b35a-3d9e49ebd3fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="메인윈도우시스템">
+      <UniqueIdentifier>{4defbb30-5f55-4376-b08c-595244e68c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="미리컴파일된해더">
+      <UniqueIdentifier>{f0d0b89f-4c12-4868-adf2-779ada900aa9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="MainProc.h">
+      <Filter>프로시저</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdProject.h">
+      <Filter>메인윈도우시스템</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>미리컴파일된해더</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>프로시저</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdProject.cpp">
+      <Filter>메인윈도우시스템</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>미리컴파일된해더</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ThirdProject.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="ThirdProject.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

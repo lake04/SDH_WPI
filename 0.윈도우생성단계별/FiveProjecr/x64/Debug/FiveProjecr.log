@@ -1,9 +1,0 @@
-﻿  pch.cpp
-  AboutProc.cpp
-  FiveProjecr.cpp
-  MainProc.cpp
-  코드를 생성하고 있습니다...
-C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\FiveProjecr\MainProc.cpp(19,29): warning C4244: 'return': 'LRESULT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
-  
-  FiveProjecr.vcxproj -> C:\Users\dlgml\OneDrive\Desktop\DJClass\StepByStep\x64\Debug\FiveProjecr.exe

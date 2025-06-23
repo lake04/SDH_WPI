@@ -81,23 +81,81 @@ int OnCommand(HWND hWnd, WPARAM wParam, LPARAM lParam)
     return 0;
 }
 
-int OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam)
-{
+int OnPaint(HWND hWnd, WPARAM wParam, LPARAM lParam) {
     PAINTSTRUCT ps;
     HDC hdc = BeginPaint(hWnd, &ps);
-    // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-    SetHDC(g_pClock, hdc);
-    Update(g_pClock);
+    int centerX =400;
+    int centerY = 300;
+    int radius = 230;
 
-    // 원 둘레의 좌표를 추출하는 공식
-    // //원래공식
-    //  x =  cos() * len + sin() * len
-    //  y = -sin() * len + cos() * len
-    // //변경 시계방향 CW
-    //  x = cos() * len - sin() * len
-    //  y = cos() * len + sin() * len
+    // 시계 배경 원
+    HBRUSH hBrush = CreateSolidBrush(RGB(60, 0, 0));
+    HPEN hPen = CreatePen(PS_SOLID, 8, RGB(255, 50, 50));
+    SelectObject(hdc, hPen);
+    SelectObject(hdc, hBrush);
+    Ellipse(hdc, centerX - radius, centerY - radius, centerX + radius, centerY + radius);
+    Ellipse(hdc, centerX - 200, centerY - 200, centerX + 200, centerY + 200);
+    DeleteObject(hPen);
+    DeleteObject(hBrush);
 
+    // 내부 원 장식
+    HPEN yellowPen = CreatePen(PS_SOLID, 8, RGB(255, 240, 0));
+    SelectObject(hdc, yellowPen);
+    Ellipse(hdc, centerX - 40, centerY - 40, centerX + 40, centerY + 40);
+    Ellipse(hdc, centerX - 15, centerY - 15, centerX + 15, centerY + 15);
+    DeleteObject(yellowPen);
+
+    // 시침 그리기
+    float hourTheta = RAD((float)((gST.wHour % 12 + gST.wMinute / 60.0f - 3) * 30));
+    int hourX = cos(hourTheta) * 100;
+    int hourY = sin(hourTheta) * 100;
+    MoveToEx(hdc, centerX, centerY, NULL);
+    LineTo(hdc, centerX + hourX, centerY + hourY);
+
+    // 분침 그리기
+    float minTheta = RAD((float)((gST.wMinute - 15) * 6));
+    int minX = cos(minTheta) * 130;
+    int minY = sin(minTheta) * 130;
+    MoveToEx(hdc, centerX, centerY, NULL);
+    LineTo(hdc, centerX + minX, centerY + minY);
+
+    // 불꽃 효과
+    for (int i = 0; i < 10; ++i) {
+        int flameX = centerX + (rand() % 100 - 50);
+        int flameY = centerY - radius + (rand() % 30 + 10);
+        HBRUSH flame = CreateSolidBrush(RGB(255, rand() % 100 + 150, 0));
+        SelectObject(hdc, flame);
+        Ellipse(hdc, flameX, flameY, flameX + 8, flameY + 15);
+        DeleteObject(flame);
+    }
+
+    // 숫자 출력 설정
+    SetBkMode(hdc, TRANSPARENT);
+    SetTextColor(hdc, RGB(255, 250, 250));
+
+    // 숫자 1~12 출력
+    for (int i = 1; i <= 12; ++i) {
+        float angle = RAD((float)(i * 30 - 90));
+        int tx = centerX + cos(angle) * (radius - 30);
+        int ty = centerY + sin(angle) * (radius - 30);
+
+        // 숫자 안쪽 작은 점 그리기
+        HBRUSH screwBrush = CreateSolidBrush(RGB(100, 0, 0));
+        HPEN screwPen = CreatePen(PS_SOLID, 1, RGB(200, 100, 100));
+        SelectObject(hdc, screwBrush);
+        SelectObject(hdc, screwPen);
+        Ellipse(hdc, tx - 12, ty - 12, tx + 12, ty + 12);
+        DeleteObject(screwBrush);
+        DeleteObject(screwPen);
+
+        // 숫자 문자열 출력
+        WCHAR numStr[3];
+        swprintf(numStr, 3, L"%d", i);
+        TextOut(hdc, tx - 6, ty - 8, numStr, wcslen(numStr));
+    }
+
+    EndPaint(hWnd, &ps);
     return 0;
 }
 
