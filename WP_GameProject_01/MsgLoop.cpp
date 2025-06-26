@@ -3,6 +3,7 @@
 
 extern BOOL bIsActive;
 extern BOOL bIsLoopExit;
+extern HDC gHDC;
 
 // 기본 메시지 루프입니다:
 int WndMsgLoop(HINSTANCE hInstance)
@@ -46,7 +47,11 @@ int GameMsgLoop(HINSTANCE hInstance)
         {
             Update();
         }
-        else WaitMessage();
+        else
+        {
+            WaitMessage();
+
+        }
     }
     return (int)msg.wParam;
 }

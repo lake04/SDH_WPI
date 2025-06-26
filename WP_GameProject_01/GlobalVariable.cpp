@@ -1,13 +1,13 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "GlobalVariable.h"
 
 
-//¸ÞÀÎ À©µµ¿ì ½Ã½ºÅÛ »ç¿ë Àü¿ªº¯¼ö
-HINSTANCE hInst = NULL;                                // ÇöÀç ÀÎ½ºÅÏ½ºÀÔ´Ï´Ù.
-WCHAR szTitle[MAX_LOADSTRING] = _T("");                  // Á¦¸ñ Ç¥½ÃÁÙ ÅØ½ºÆ®ÀÔ´Ï´Ù.
-WCHAR szWindowClass[MAX_LOADSTRING] = _T("");            // ±âº» Ã¢ Å¬·¡½º ÀÌ¸§ÀÔ´Ï´Ù.
+//ë©”ì¸ìœˆë„ìš° ì‹œìŠ¤í…œ ì‚¬ìš© ì „ì—­ë³€ìˆ˜
+HINSTANCE hInst = NULL;                                // í˜„ìž¬ ì¸ìŠ¤í„´ìŠ¤ìž…ë‹ˆë‹¤.
+WCHAR szTitle[MAX_LOADSTRING] = _T("");                  // ì œëª© í‘œì‹œì¤„ í…ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.
+WCHAR szWindowClass[MAX_LOADSTRING] = _T("");            // ê¸°ë³¸ ì°½ í´ëž˜ìŠ¤ ì´ë¦„ìž…ë‹ˆë‹¤.
 
-//¸ÞÀÎÇÁ·Î½ÃÀú Àü¿ªº¯¼ö
+//ë©”ì¸í”„ë¡œì‹œì € ì „ì—­ë³€ìˆ˜
 BOOL bIsLoopExit = TRUE;
 BOOL bIsActive = FALSE;
 int nFPS = 0;
@@ -15,7 +15,8 @@ int nCount = 0;
 HDC gHDC = NULL;
 HWND ghWnd = NULL;
 
-//GamgeManager Àü¿ªº¯¼ö
-HDC ScreenDC = NULL; //È­¸éDC //¸ÞÀÎDC
-HDC MemoryDC = NULL; //¸Þ¸ð¸®¿¡¼­ ÀÌ¹ÌÁö¸¦ ¸ðÀ¸´Â DC
-HBITMAP hBitmap = NULL; //ÇØ´çDCÀÇ ÀÌ¹ÌÁö ÀÚÃ¼
+//GameManager ì „ì—­ë³€ìˆ˜
+HDC ScreenDC = NULL; //í™”ë©´DC //ë©”ì¸DC
+HDC MemoryDC = NULL; //ë©”ëª¨ë¦¬ì—ì„œ ì´ë¯¸ì§€ë¥¼ ëª¨ìœ¼ëŠ” DC
+HBITMAP hBitmap = NULL; //í•´ë‹¹DCì˜ ì´ë¯¸ì§€ ìžì²´
+

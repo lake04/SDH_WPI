@@ -15,6 +15,7 @@
 #include "BackGround.h"
 #include "Dino.h"
 #include "Cactus.h"
+#include "Cloud.h"
 #include "GameManager.h"
 #include "MainProc.h"
 #include "MsgLoop.h"

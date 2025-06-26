@@ -8,6 +8,10 @@ extern int nFPS;
 extern int nCount;
 extern HDC gHDC;
 extern HWND ghWnd;
+extern float velocityY;
+extern HWND hRestartButton;
+
+#define ID_RESTART_BUTTON 2001
 
 int OnCreate(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
@@ -39,6 +43,17 @@ int OnCommand(HWND hWnd, WPARAM wParam, LPARAM lParam)
     case IDM_ABOUT:
         DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
         break;
+    case ID_RESTART_BUTTON:
+        if (hRestartButton)
+        {
+            DestroyWindow(hRestartButton);
+            hRestartButton = NULL;
+        }
+
+        bIsActive = TRUE;
+        Release();
+        Start(); 
+        break;
     case IDM_EXIT:
         DestroyWindow(hWnd);
         break;
@@ -56,10 +71,7 @@ int OnCommand(HWND hWnd, WPARAM wParam, LPARAM lParam)
 //    EndPaint(hWnd, &ps);
 //    return 0;
 //}
-
 extern DINO* Dino;
-
-
 int OnTimer(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
     if (wParam == 0)
@@ -68,32 +80,39 @@ int OnTimer(HWND hWnd, WPARAM wParam, LPARAM lParam)
         nCount = 0;
     }
 
-    if (wParam == 100)
+ /*   if (wParam == 100)
     {
         if (getJump(Dino) == true)
         {
             setJump(Dino, false);
             KillTimer(hWnd, 100);
         }
-        
-        
-    }
-    
+    }*/
 
     return 0;
 }
 
 int OnKeyDown(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
-    if (getJump(Dino) == false)
+    if (wParam == VK_SPACE && getJump(Dino) == false)
     {
         setJump(Dino, true);
-        SetTimer(hWnd,100, 300, NULL);
+        velocityY = -10.0f;  
     }
-  
     return 0;
 }
 
+
+//
+//  함수: WndProc(HWND, UINT, WPARAM, LPARAM)
+//
+//  용도: 주 창의 메시지를 처리합니다.
+//
+//  WM_COMMAND  - 애플리케이션 메뉴를 처리합니다.
+//  WM_PAINT    - 주 창을 그립니다.
+//  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
+//
+//
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -101,7 +120,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_CREATE: return OnCreate(hWnd, wParam, lParam);
     case WM_COMMAND:return OnCommand(hWnd, wParam, lParam);
     case WM_TIMER:  return OnTimer(hWnd, wParam, lParam);
-    case WM_KEYDOWN: return OnKeyDown(hWnd, wParam, lParam);
+    case WM_KEYDOWN:return OnKeyDown(hWnd, wParam, lParam);
 //    case WM_PAINT:  return OnPaint(hWnd, wParam, lParam);
     case WM_DESTROY:return OnDestroy(hWnd, wParam, lParam);
     default:        return DefWindowProc(hWnd, message, wParam, lParam);

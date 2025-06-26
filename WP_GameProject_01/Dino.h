@@ -1,19 +1,17 @@
-#pragma once
+ï»¿#pragma once
 
 typedef struct ___Dino
 {
-	//¿ÀºêÁ§Æ® ÁÂÇ¥,Å©±â
+	//ì˜¤ë¸Œì íŠ¸ ì¢Œí‘œ, í¬ê¸°
 	int x, y;
 	int w, h;
 	bool bIsJump;
 
-	//ÀÌ¹ÌÁö¿¡ ´ëÇÑ ÁÂÇ¥, Å©±â
+	//ì´ë¯¸ì§€ì— ëŒ€í•œ ì¢Œí‘œ, í¬ê¸°
 	HDC hImgDC;
 	HBITMAP hImgBM;
 	int sx, sy;
 	int ex, ey;
-
-
 }DINO;
 
 DINO* StartDino(HDC hdc, int resource);
@@ -21,5 +19,5 @@ void Update(DINO* Obj);
 void Render(HDC hdc, DINO* Obj);
 void Release(DINO* Obj);
 
-inline bool getJump(DINO* Obj) { return Obj->bIsJump; };
-inline bool setJump(DINO* Obj, bool jump) { return Obj->bIsJump = jump; };
+inline bool getJump(DINO* Obj) { return Obj->bIsJump; }
+inline void setJump(DINO* Obj, bool jump) { Obj->bIsJump = jump; }

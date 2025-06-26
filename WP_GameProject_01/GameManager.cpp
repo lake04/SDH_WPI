@@ -7,6 +7,7 @@ extern int nCount;
 extern HDC gHDC;
 extern HWND ghWnd;
 extern BOOL bIsLoopExit;
+extern BOOL bIsActive;
 
 extern HDC ScreenDC; //화면DC //메인DC
 extern HDC MemoryDC; //메모리에서 이미지를 모으는 DC
@@ -15,27 +16,36 @@ extern HBITMAP hBitmap; //해당DC의 이미지 자체
 BACKGROUND* BackGround = NULL;
 DINO* Dino = NULL;
 CACTUS* Cactus[5] = {};
+CLOUD*  Clouds[5] = {};
 
-bool Collision(DINO* Player, CACTUS* Object)
+HWND hRestartButton = NULL;
+
+BOOL Collision(DINO* Player, CACTUS* Object)
 {
-	int playerLeft = Player->x - Player->w / 2;
-	int playerRight = Player->x + Player->w / 2;
-	int objectLeft = Object->x - Object->w / 2;
-	int objectRight = Object->x + Object->w / 2;
-
-	if (playerRight >= objectLeft &&
-		playerLeft <= objectRight &&
-		Player->bIsJump == false)
+	if (Player->x + Player->w / 2 > Object->x - Object->w / 2 &&
+		Player->x - Player->w / 2 < Object->x + Object->w / 2 &&
+		!Player->bIsJump && bIsActive)
 	{
-		//MessageBox(ghWnd, L"플레이어와 선인장 충돌", L"Crash", MB_OK);
-		//sndPlaySound(MAKEINTRESOURCE(IDR_WAVE2), SND_RESOURCE);
-		PlaySound(L".//mic_off_audio.wav", NULL, SND_FILENAME | SND_ASYNC);
-		TextOut(gHDC, 250, 250,L"Game Over",10);
+		sndPlaySound(MAKEINTRESOURCE(IDR_WAVE1), SND_RESOURCE | SND_ASYNC);
+
+		TextOut(MemoryDC, 260, 150, L"GAME OVER", 9);
+
+		if (hRestartButton == NULL)  
+		{
+			hRestartButton = CreateWindow(
+				L"BUTTON", L"재시작",
+				WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,
+				250, 200, 100, 40,
+				ghWnd, (HMENU)2001, hInst, NULL
+			);
+		}
+
+		bIsActive = FALSE;
 		return TRUE;
 	}
+
 	return FALSE;
 }
-
 
 void Awake()
 {
@@ -46,25 +56,31 @@ void Awake()
 void Start()
 {
 	ScreenDC = GetDC(ghWnd); //화면DC 선언 //프라임 버퍼
-
-	//이미지를 모으는 작업 //세컨드 버퍼
-	MemoryDC = CreateCompatibleDC(ScreenDC); //메모리 DC 생성
-	hBitmap = CreateCompatibleBitmap(ScreenDC,640,640); //1bit 흑백이미지 1면 너비 640 높이 480 생성
 	
+	//이미지를 모으는 작업  //세컨 버퍼
+	MemoryDC = CreateCompatibleDC(ScreenDC); //메모리 DC 생성
+	hBitmap = CreateCompatibleBitmap(ScreenDC, 640, 480); //너비 640 높이 480 화면과 동일한 표면생성
 	SelectObject(MemoryDC, hBitmap); //DC와 비트맵 연결 //포인터와 데이터 연결
 
 	BackGround = StartBackground(ScreenDC, IDB_GROUND1);
-	Dino = StartDino(ScreenDC, IDB_ROBAT);
+	Dino = StartDino(ScreenDC, IDB_ROBOT);
+
+	int xBase = 800;
 	for (int i = 0; i < 5; i++)
 	{
-		Cactus[i] = StartCactus(ScreenDC, IDB_CACTUS);
-		setX(Cactus[i], rand() % 5 * 100 + 400);
-
+		Cactus[i] = StartCactus(ScreenDC, IDB_CACTUS1);
+		setX(Cactus[i], xBase);
+		xBase += rand() % 300 + 300; 
 	}
 
+	int yBase = 100;
+	for (int i = 0; i < 5; i++)
+	{
+		Clouds[i] = StartCloud(ScreenDC, IDB_CACTUS1);
+		setY(Clouds[i], yBase);
+		yBase += rand() % 300 + 300;
+	}
 }
-
-
 
 void Update()
 {
@@ -72,7 +88,6 @@ void Update()
 	Update(Dino);
 
 	Render(MemoryDC, BackGround);
-	Render(MemoryDC, Dino);
 	for (int i = 0; i < 5; i++)
 	{
 		Update(Cactus[i]);
@@ -80,9 +95,9 @@ void Update()
 		Collision(Dino, Cactus[i]);
 
 	}
+	Render(MemoryDC, Dino);
 
-	Sleep(100);
-
+	Sleep(1);
 
 #ifdef _DEBUG
 	//===================================================================
@@ -92,18 +107,23 @@ void Update()
 	wsprintf(strTemp, L"FPS = %06d, frame = %06d", nFPS, nCount);
 	TextOut(MemoryDC, 0, 0, strTemp, wcslen(strTemp));
 	//===================================================================
-	#endif 
-
+#endif
+	
 	BitBlt(ScreenDC, 0, 0, 640, 480, MemoryDC, 0, 0, SRCCOPY); //메모리DC 모아진 이미지를 화면에 출력
 }
 
+void Score()
+{
+	wchar_t strTemp[128] = L"";
+	wsprintf(strTemp, L"Score = %06d, frame = %06d", nFPS, nCount);
+	TextOut(MemoryDC, 0, 0, strTemp, wcslen(strTemp));
+}
 void Release()
 {
 	for (int i = 0; i < 5; i++)
 	{
 		Release(Cactus[i]);
 	}
-
 	Release(Dino);
 	Release(BackGround);
 
@@ -112,3 +132,4 @@ void Release()
 
 	ReleaseDC(ghWnd, ScreenDC); //화면 DC 지우기 //메인 DC지우기
 }
+

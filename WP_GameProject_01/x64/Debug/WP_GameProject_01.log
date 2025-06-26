@@ -1,2 +1,1 @@
-﻿  BackGround.cpp
-  WP_GameProject_01.vcxproj -> C:\Users\wjdgh\SDH_WPI\x64\Debug\WP_GameProject_01.exe
+﻿LINK : fatal error LNK1168: C:\Users\wjdgh\SDH_WPI\x64\Debug\4.WP_GameProject_01.exe을(를) 쓰기용으로 열 수 없습니다.

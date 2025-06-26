@@ -1,27 +1,26 @@
-#pragma once
+ï»¿#pragma once
 
 typedef struct ___Background
 {
-	//¿ÀºêÁ§Æ® ÁÂÇ¥,Å©±â
+	//ì˜¤ë¸Œì íŠ¸ ì¢Œí‘œ, í¬ê¸°
 	int x, y;
 	int w, h;
-	int speedX, speedY; //¹è°æ °´Ã¼ ¿òÁ÷ÀÌ´Â ¼Óµµ
+	int speedX, speedY; //ë°°ê²½ ê°ì²´ ì›€ì§ì´ëŠ” ì†ë„
 
-	//ÀÌ¹ÌÁö¿¡ ´ëÇÑ ÁÂÇ¥, Å©±â
+	//ì´ë¯¸ì§€ì— ëŒ€í•œ ì¢Œí‘œ, í¬ê¸°
 	HDC hImgDC;
 	HBITMAP hImgBM;
 	int sx, sy;
 	int ex, ey;
-
-
 }BACKGROUND;
 
 BACKGROUND* StartBackground(HDC hdc, int resource);
 void Update(BACKGROUND* Obj);
-void Render(HDC hdc, BACKGROUND* obj);
+void Render(HDC hdc, BACKGROUND* Obj);
 void Release(BACKGROUND* Obj);
 
 inline int getSpeedX(BACKGROUND* Obj) { return Obj->speedX; }
 inline int getSpeedY(BACKGROUND* Obj) { return Obj->speedY; }
-inline int setSpeedX(BACKGROUND* Obj, int speed) { return Obj->speedX = speed; }
-inline int setSpeedY(BACKGROUND* Obj, int speed) { return Obj->speedY = speed; }
+inline void setSpeedX(BACKGROUND* Obj, int speed) { Obj->speedX = speed; }
+inline void setSpeedY(BACKGROUND* Obj, int speed) { Obj->speedY = speed; }
+

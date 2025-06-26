@@ -1,3 +1,3 @@
-#pragma once
+﻿#pragma once
 
 #define MAX_LOADSTRING 100

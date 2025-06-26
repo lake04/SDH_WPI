@@ -1,47 +1,49 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "BackGround.h"
 
 extern HINSTANCE hInst;
 extern HWND ghWnd;
 
 BACKGROUND* StartBackground(HDC hdc, int resource)
-{
+{ 
 	BACKGROUND* Temp;
 	Temp = (BACKGROUND*)malloc(sizeof(BACKGROUND));
 
 	Temp->hImgDC = CreateCompatibleDC(hdc);
-	Temp->hImgBM=  LoadBitmap(hInst,MAKEINTRESOURCE(resource));
-	SelectObject(Temp->hImgDC,Temp->hImgBM);
+	Temp->hImgBM = LoadBitmap(hInst, MAKEINTRESOURCE(resource));
+	SelectObject(Temp->hImgDC, Temp->hImgBM);
 
-	Temp->x = 0; Temp->y = 0;
-	Temp->w = 640; Temp->h = 200;
+	Temp->x = 0;	Temp->y = 200;
+	Temp->w = 640;	Temp->h = 100;
 
-	Temp->sx = 500; Temp->sy = -70;
-	Temp->ex = 2000; Temp->ey = 2000;
+	Temp->sx = 0;	Temp->sy = 0;
+	Temp->ex = 640; Temp->ey = 100;
 
-	setSpeedX(Temp, 10);
-	setSpeedY(Temp, 1);
+	Temp->speedX += 1;
+	setSpeedX(Temp, 1);
+	Temp->speedY += 0;
+	setSpeedY(Temp, 0);
 
 	return Temp;
 }
+
 void Update(BACKGROUND* Obj)
 {
 	Obj->sx += Obj->speedX;
-	if (Obj->sx >= 660) Obj->sx = 0;
-
-	Sleep(1000 / 100);
+	if (Obj->sx >= 1200 - Obj->w)	Obj->sx = 0;
 }
+
 void Render(HDC hdc, BACKGROUND* Obj)
 {
-	PatBlt(hdc, 0, 0, 640, 480, WHITENESS); //DC¸¦ Æ¯Á¤ÇÑ Á¶°ÇÀ¸·Î Ã¤¿ì±â-->ÇöÁ¦´Â Èò»öÀ¸·Î Ã¤¿ò
+	PatBlt(hdc, 0, 0, 640, 480, WHITENESS);  //DCë¥¼ íŠ¹ì •í•œ ì¡°ê±´ìœ¼ë¡œ ì±„ìš°ê¸° 
 
-	BitBlt(hdc, Obj->x, Obj->y, Obj->w, Obj->h, Obj->hImgDC, Obj->sx, Obj->sy, SRCCOPY);
-
+	BitBlt(hdc, Obj->x, Obj->y, Obj->w, Obj->h, 
+		   Obj->hImgDC, Obj->sx, Obj->sy, SRCCOPY);
 }
+
 void Release(BACKGROUND* Obj)
 {
 	DeleteObject(Obj->hImgBM);
-	ReleaseDC(ghWnd,Obj->hImgDC);
-	if (Obj != NULL) free(Obj);
-
+	ReleaseDC(ghWnd, Obj->hImgDC);
+	if(Obj != NULL)	free(Obj);
 }

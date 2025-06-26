@@ -1,8 +1,14 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "Dino.h"
 
 extern HINSTANCE hInst;
 extern HWND ghWnd;
+
+#define GRAVITY 0.5f
+#define JUMP_POWER -10.0f
+#define GROUND_Y 230
+
+float velocityY = 0.0f;
 
 DINO* StartDino(HDC hdc, int resource)
 {
@@ -13,14 +19,15 @@ DINO* StartDino(HDC hdc, int resource)
 	Temp->hImgBM = LoadBitmap(hInst, MAKEINTRESOURCE(resource));
 	SelectObject(Temp->hImgDC, Temp->hImgBM);
 
-	//º¸¿©Áö´Â ÀÌ¹ÌÁö Å©±â
-	Temp->x = 20; Temp->y = 0;
-	Temp->w = 49; Temp->h = 50;
+	//ë³´ì—¬ì§€ëŠ” ì´ë¯¸ì§€ í¬ê¸°
+	Temp->x = 40;	Temp->y = 210;
+	Temp->w = 40;	Temp->h = 50;
 
-	//¿øº» ÀÌ¹ÌÁö Å©±â
-	Temp->sx = 0; Temp->sy = 0;
+	//ì›ë³¸ ì´ë¯¸ì§€ í¬ê¸°
+	Temp->sx = 0;	Temp->sy = 0;
 	Temp->ex = 192; Temp->ey = 192;
 
+	Temp->bIsJump = false;
 	setJump(Temp, false);
 
 	return Temp;
@@ -28,28 +35,39 @@ DINO* StartDino(HDC hdc, int resource)
 
 void Update(DINO* Obj)
 {
-	if (getJump(Obj) == true)
+	//if (getJump(Obj) == true)
+	//{
+	//	Obj->y = 100;
+	//}
+	//else
+	//{
+	//	Obj->y = 210;
+	//}
+	if (getJump(Obj))
 	{
-		Obj->y = 20;
+		velocityY += GRAVITY;
+		Obj->y += (int)(velocityY);
+
+		if (Obj->y >= GROUND_Y)
+		{
+			Obj->y = GROUND_Y;
+			velocityY = 0.0f;
+			setJump(Obj, false); 
+		}
 	}
-	else
-	{
-		Obj->y = 100;
-	}
+
 }
+
 void Render(HDC hdc, DINO* Obj)
 {
-
-
 	//BitBlt(hdc, Obj->x, Obj->y, Obj->w, Obj->h, Obj->hImgDC, Obj->sx, Obj->sy, SRCCOPY);
 	TransparentBlt(hdc, Obj->x, Obj->y, Obj->w, Obj->h,
-		Obj->hImgDC, Obj->sx, Obj->sy, Obj->ex, Obj->ey, RGB(255, 255, 255));
-
+		           Obj->hImgDC, Obj->sx, Obj->sy, Obj->ex, Obj->ey, RGB(255, 255, 255));
 }
+
 void Release(DINO* Obj)
 {
 	DeleteObject(Obj->hImgBM);
 	ReleaseDC(ghWnd, Obj->hImgDC);
-	if (Obj != NULL) free(Obj);
-
+	if (Obj != NULL)	free(Obj);
 }

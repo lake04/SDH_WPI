@@ -9,23 +9,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="전역변수">
+      <UniqueIdentifier>{a41431cb-81a4-4008-847a-9d61405cfc56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="미리컴파일된헤더">
+      <UniqueIdentifier>{76a5d453-1957-48c5-ba68-4f6e8445c7dd}</UniqueIdentifier>
+    </Filter>
     <Filter Include="프로시저">
-      <UniqueIdentifier>{c3582c89-1193-4323-8d42-6edd496d7c9d}</UniqueIdentifier>
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="메인윈도우시스템">
-      <UniqueIdentifier>{93f9ea46-1cbe-4ffa-8343-83e9cc6578d5}</UniqueIdentifier>
+      <UniqueIdentifier>{ad1892f8-b034-4273-80c2-5f765d607d08}</UniqueIdentifier>
     </Filter>
-    <Filter Include="미리컴파일된 해더">
-      <UniqueIdentifier>{133ba3ee-8fb2-4898-95a8-86e5ded2abff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="메시지루프">
-      <UniqueIdentifier>{67c34d55-323a-413c-b2ef-2cf81125705e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="전역변수">
-      <UniqueIdentifier>{b5e8c503-0989-42c3-8b19-eb8fb9c4948e}</UniqueIdentifier>
+    <Filter Include="메인윈도우시스템\메세지루프">
+      <UniqueIdentifier>{0b2c867e-e2de-4675-b478-f7ae8201b2bd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game">
-      <UniqueIdentifier>{74cae4b5-adf9-4ebf-8f5e-d85a566aa923}</UniqueIdentifier>
+      <UniqueIdentifier>{9f43f926-8472-4e92-90e6-9a3b7ce6ab7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Obstacle">
+      <UniqueIdentifier>{940b2753-9bde-4159-b1c3-dd2f6caaf3f4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +43,7 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>미리컴파일된 해더</Filter>
+      <Filter>미리컴파일된헤더</Filter>
     </ClInclude>
     <ClInclude Include="WP_GameProject_01.h">
       <Filter>메인윈도우시스템</Filter>
@@ -50,23 +54,29 @@
     <ClInclude Include="MainProc.h">
       <Filter>프로시저</Filter>
     </ClInclude>
+    <ClInclude Include="MsgLoop.h">
+      <Filter>메인윈도우시스템\메세지루프</Filter>
+    </ClInclude>
     <ClInclude Include="GlobalVariable.h">
       <Filter>전역변수</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="MsgLoop.h">
-      <Filter>메시지루프</Filter>
+    <ClInclude Include="BackGround.h">
+      <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Dino.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="BackGround.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="Cloud.h">
+      <Filter>Game\Obstacle</Filter>
     </ClInclude>
     <ClInclude Include="Cactus.h">
-      <Filter>Game</Filter>
+      <Filter>Game\Obstacle</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -74,19 +84,19 @@
       <Filter>메인윈도우시스템</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>미리컴파일된 해더</Filter>
-    </ClCompile>
-    <ClCompile Include="MainProc.cpp">
-      <Filter>프로시저</Filter>
+      <Filter>미리컴파일된헤더</Filter>
     </ClCompile>
     <ClCompile Include="AboutProc.cpp">
       <Filter>프로시저</Filter>
     </ClCompile>
-    <ClCompile Include="GlobalVariable.cpp">
-      <Filter>전역변수</Filter>
+    <ClCompile Include="MainProc.cpp">
+      <Filter>프로시저</Filter>
     </ClCompile>
     <ClCompile Include="MsgLoop.cpp">
-      <Filter>메시지루프</Filter>
+      <Filter>메인윈도우시스템\메세지루프</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVariable.cpp">
+      <Filter>전역변수</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
       <Filter>Game</Filter>
@@ -97,8 +107,14 @@
     <ClCompile Include="Dino.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Cloud.cpp">
+      <Filter>Game\Obstacle</Filter>
+    </ClCompile>
     <ClCompile Include="Cactus.cpp">
-      <Filter>Game</Filter>
+      <Filter>Game\Obstacle</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>프로시저</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,21 +132,23 @@
     <Image Include="bitmap1.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="bitmap2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
     <Image Include="bmp00001.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="bmp00002.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="bmp00003.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="cactus.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
     <Image Include="robot.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wave1.bin">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Media Include="mic_off_audio.wav">
@@ -139,19 +157,5 @@
     <Media Include="mic_on_audio.wav">
       <Filter>리소스 파일</Filter>
     </Media>
-    <Media Include="Hit.wav">
-      <Filter>리소스 파일</Filter>
-    </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wave3.bin">
-      <Filter>리소스 파일</Filter>
-    </None>
-    <None Include="wave4.bin">
-      <Filter>리소스 파일</Filter>
-    </None>
-    <None Include="wave2.bin">
-      <Filter>리소스 파일</Filter>
-    </None>
   </ItemGroup>
 </Project>
