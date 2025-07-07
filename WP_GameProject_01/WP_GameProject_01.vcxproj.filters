@@ -75,9 +75,6 @@
     <ClInclude Include="Cactus.h">
       <Filter>Game\Obstacle</Filter>
     </ClInclude>
-    <ClInclude Include="Score.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WP_GameProject_01.cpp">
@@ -113,9 +110,6 @@
     <ClCompile Include="Cactus.cpp">
       <Filter>Game\Obstacle</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
-      <Filter>프로시저</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WP_GameProject_01.rc">
@@ -142,6 +136,9 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="robot.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Cloud.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

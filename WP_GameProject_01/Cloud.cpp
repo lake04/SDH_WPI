@@ -29,7 +29,11 @@ CLOUD* StartCloud(HDC hdc, int resource)
 void Update(CLOUD* Obj)
 {
 	Obj->x += Obj->speedX;
-	if (Obj->x < (0 - Obj->w)) setX(Obj, rand() % 5 * 300 + 800);
+	if (Obj->x < (0 - Obj->w))
+	{
+		setX(Obj, rand() % 5 * 300 + 800);
+		setY(Obj, rand() % 50 * 300 + 800);
+	}
 }
 
 void Render(HDC hdc, CLOUD* Obj)

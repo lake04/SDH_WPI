@@ -10,12 +10,15 @@ extern HDC gHDC;
 extern HWND ghWnd;
 extern float velocityY;
 extern HWND hRestartButton;
+extern int score;
+extern float cactusSpeed;
 
 #define ID_RESTART_BUTTON 2001
 
 int OnCreate(HWND hWnd, WPARAM wParam, LPARAM lParam)
 {
     ghWnd = hWnd;
+
     Start();
     SetTimer(hWnd, 0, 1000, NULL);
     gHDC = GetDC(hWnd);
@@ -49,6 +52,7 @@ int OnCommand(HWND hWnd, WPARAM wParam, LPARAM lParam)
             DestroyWindow(hRestartButton);
             hRestartButton = NULL;
         }
+        cactusSpeed = -3;
 
         bIsActive = TRUE;
         Release();

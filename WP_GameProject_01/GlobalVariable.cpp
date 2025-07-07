@@ -14,6 +14,9 @@ int nFPS = 0;
 int nCount = 0;
 HDC gHDC = NULL;
 HWND ghWnd = NULL;
+int score;
+int maxScore;
+float cactusSpeed = -3;
 
 //GameManager 전역변수
 HDC ScreenDC = NULL; //화면DC //메인DC

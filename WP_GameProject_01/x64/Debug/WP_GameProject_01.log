@@ -1,1 +1,5 @@
-﻿LINK : fatal error LNK1168: C:\Users\wjdgh\SDH_WPI\x64\Debug\4.WP_GameProject_01.exe을(를) 쓰기용으로 열 수 없습니다.
+﻿  MainProc.cpp
+C:\Users\wjdgh\SDH_WPI\WP_GameProject_01\MainProc.cpp(65,29): warning C4244: 'return': 'LRESULT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/MainProc.cpp'을(를) 컴파일하는 중)
+  
+  WP_GameProject_01.vcxproj -> C:\Users\wjdgh\SDH_WPI\x64\Debug\4.WP_GameProject_01.exe
